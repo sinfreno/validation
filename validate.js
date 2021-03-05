@@ -71,7 +71,7 @@ function validateLogin() {
 		acumErrores ++;
 	}else if(!tiene_numeros(password.value)){
 		password.classList.add("is-invalid");
-		document.getElementById("errorPwdLog").textContent = "Este campo ha de contener mínimo una letra";
+		document.getElementById("errorPwdLog").textContent = "Este campo ha de contener mínimo un número";
 		acumErrores ++;
 	}
 
@@ -127,7 +127,7 @@ function registerValidate() {
 		acumErrores ++;
 	}else if(!tiene_numeros(inputPassword.value)){
 		inputPassword.classList.add("is-invalid");
-		document.getElementById("errorPassword").textContent = "Este campo ha de contener mínimo una letra";
+		document.getElementById("errorPassword").textContent = "Este campo ha de contener mínimo un número";
 		acumErrores ++;
 	}
 
