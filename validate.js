@@ -57,17 +57,24 @@ function validateLogin() {
 		acumErrores ++;
 	}
 
-
-
-
-
-
-
     if(password.value == "") {
 		password.classList.add("is-invalid");
 		document.getElementById("errorPwdLog").textContent = "Este campo es obligatorio";
 		acumErrores ++;
+	}else if( password.value.length < 8){
+		password.classList.add("is-invalid");
+		document.getElementById("errorPwdLog").textContent = "Este campo ha de contener como mínimo 8 caracteres";
+		acumErrores ++;
+	}else if(!tiene_mayusculas(password.value)){
+		password.classList.add("is-invalid");
+		document.getElementById("errorPwdLog").textContent = "Este campo ha de contener mínimo una mayuscula";
+		acumErrores ++;
+	}else if(!tiene_numeros(password.value)){
+		password.classList.add("is-invalid");
+		document.getElementById("errorPwdLog").textContent = "Este campo ha de contener mínimo una letra";
+		acumErrores ++;
 	}
+
 
     if (acumErrores > 0){
         return false;
@@ -110,7 +117,19 @@ function registerValidate() {
 		inputPassword.classList.add("is-invalid");
 		document.getElementById("errorPassword").textContent = "Este campo es obligatorio";
 		acumErrores ++;
-    }
+    }else if( inputPassword.value.length < 8){
+		inputPassword.classList.add("is-invalid");
+		document.getElementById("errorPassword").textContent = "Este campo ha de contener como mínimo 8 caracteres";
+		acumErrores ++;
+	}else if(!tiene_mayusculas(inputPassword.value)){
+		inputPassword.classList.add("is-invalid");
+		document.getElementById("errorPassword").textContent = "Este campo ha de contener mínimo una mayuscula";
+		acumErrores ++;
+	}else if(!tiene_numeros(inputPassword.value)){
+		inputPassword.classList.add("is-invalid");
+		document.getElementById("errorPassword").textContent = "Este campo ha de contener mínimo una letra";
+		acumErrores ++;
+	}
 
     // Si la contraseña no coincide tampoco se envía el formulario
     if(inputRePassword.value == "" || inputRePassword.value != inputPassword.value) {
@@ -152,5 +171,25 @@ function validar_email(email) {
 	return regex.test(email) ? true : false;
 }
 
+var letras_mayusculas="ABCDEFGHYJKLMNÑOPQRSTUVWXYZ";
 
+function tiene_mayusculas(texto){
+   for(i=0; i<texto.length; i++){
+      if (letras_mayusculas.indexOf(texto.charAt(i),0)!=-1){
+         return true;
+      }
+   }
+   return false;
+}
+
+var numeros="0123456789";
+
+function tiene_numeros(texto){
+   for(i=0; i<texto.length; i++){
+      if (numeros.indexOf(texto.charAt(i),0)!=-1){
+         return true;
+      }
+   }
+   return false;
+}
 
