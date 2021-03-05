@@ -1,0 +1,127 @@
+/* General */
+
+.modal-backdrop {
+    position:unset !important;
+  }
+
+body {
+    background-image: url(../images/fondo.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.navbar img{
+    height: 30px;
+}
+
+
+.container-fluid{
+    padding-left: 0;
+    padding-right: 0;
+    margin: auto;
+    max-width: 1000px;
+}
+.carousel-inner img {
+    width: 100%;
+    height: 100%;
+  }
+
+.carousel-inner {
+    max-height: 400px;
+}
+
+.carousel{
+    margin-top: 80px;
+}
+
+footer{
+    margin: 20px 0;
+    padding: 20px;
+}
+
+
+/* espacio debajo del slider */
+#space{
+    height: 30px;
+}
+/* Caracteristicas del texto y fotos del portafolio */
+.portfolio{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.portfolio p,h1{
+    padding: 0 30px 30px 30px;
+}
+
+.colorines {
+    text-align: center;
+    padding: 30px;
+}
+
+.gotop {
+    text-align: right;
+}
+
+.rss {
+    text-align: center;
+
+}
+
+/* Shadow */
+
+.shadow {
+    box-shadow: 5px 7px 14px 0px rgba(50, 50, 50, 0.31);
+}
+
+@media screen and (max-width: 768px) {
+    
+    .copy, .rss, .gotop {
+        text-align: center;
+        margin: 20px;
+    }
+}
+
+/* Text colors change */
+.text-primary {
+    color: rgb(173, 173, 173) !important;
+
+}
+
+.text-secondary{
+    color: rgb(39, 48, 34) !important;
+}
+
+.text-success{
+    color: rgb(43, 214, 226) !important;
+}
+
+.text-danger{
+    color: rgb(136, 0, 0) !important;
+}
+
+.text-warning{
+    color: rgb(236, 235, 125) !important;
+}
+
+.text-info{
+    color: rgb(13, 175, 54) !important;
+}
+
+.text-light{
+    color: blueviolet !important;
+
+}
+
+.text-dark{
+    color: rgb(245, 139, 218) !important;
+
+}
+
+.text-muted{
+    color: rgb(126, 192, 148) !important;
+}
+
+.text-white{
+    color: rgb(186, 181, 190) !important;
+}
